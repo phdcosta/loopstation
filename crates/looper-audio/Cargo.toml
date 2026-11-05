@@ -1,0 +1,16 @@
+[package]
+name = "looper-audio"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+looper-core.workspace = true
+looper-engine.workspace = true
+cpal.workspace = true
+
+[features]
+default = []
+# ASIO (Windows): exige o ASIO SDK da Steinberg e `ASIO_SDK_DIR` no ambiente.
+asio = ["cpal/asio"]

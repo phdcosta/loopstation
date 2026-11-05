@@ -1,0 +1,13 @@
+[package]
+name = "looper-decode"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+looper-core.workspace = true
+symphonia.workspace = true
+
+[dev-dependencies]
+hound.workspace = true

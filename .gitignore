@@ -1,0 +1,16 @@
+# build
+target/
+**/*.rs.bk
+*.pdb
+/out
+
+# audio de teste local
+*.wav
+!tests/golden/**/*.wav
+
+# imagens de referencia de terceiros (nao publicar)
+docs/ref/
+
+# sistema
+.DS_Store
+Thumbs.db

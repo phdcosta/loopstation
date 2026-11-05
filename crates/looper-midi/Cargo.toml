@@ -1,0 +1,13 @@
+[package]
+name = "looper-midi"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+looper-core.workspace = true
+
+# O backend `midir` entra no M5. Ele fica de fora por enquanto porque a versão
+# atual puxa `alsa 0.9`, que conflita com a `alsa 0.11` do `cpal 0.18` na
+# resolução do workspace (mesmo em builds Windows).

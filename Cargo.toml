@@ -1,0 +1,48 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/looper-core",
+    "crates/looper-stretch",
+    "crates/looper-decode",
+    "crates/looper-engine",
+    "crates/looper-audio",
+    "crates/looper-link",
+    "crates/looper-midi",
+    "crates/looper-project",
+    "crates/looper-ui",
+    "crates/looper-app",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.82"
+license = "GPL-3.0-or-later"
+authors = ["Loopstation contributors"]
+
+[workspace.dependencies]
+looper-core = { path = "crates/looper-core" }
+looper-stretch = { path = "crates/looper-stretch" }
+looper-decode = { path = "crates/looper-decode" }
+looper-engine = { path = "crates/looper-engine" }
+looper-audio = { path = "crates/looper-audio" }
+looper-link = { path = "crates/looper-link" }
+looper-midi = { path = "crates/looper-midi" }
+looper-project = { path = "crates/looper-project" }
+looper-ui = { path = "crates/looper-ui" }
+
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+hound = "3.5"
+cpal = "0.18"
+symphonia = { version = "0.5", features = ["mp3"] }
+eframe = "0.32"
+rtrb = "0.3"
+rfd = "0.15"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+
+[profile.bench]
+lto = "thin"

@@ -1,0 +1,25 @@
+[package]
+name = "looper-app"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+default-run = "looper"
+
+[[bin]]
+name = "looper"
+path = "src/main.rs"
+
+[dependencies]
+looper-core.workspace = true
+looper-engine.workspace = true
+looper-decode.workspace = true
+looper-audio.workspace = true
+looper-link.workspace = true
+looper-midi.workspace = true
+looper-project.workspace = true
+looper-ui.workspace = true
+hound.workspace = true
+eframe.workspace = true
+rtrb.workspace = true
+rfd.workspace = true
